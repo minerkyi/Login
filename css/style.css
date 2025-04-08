@@ -164,3 +164,13 @@ article > p::after {
 .btn-group a:nth-child(4) {
     border-color: #F2C94C;
 }
+
+span.error {
+    color: #F4492E;
+    font-size: 14px;
+    display: none;
+}
+
+input.error {
+    border: 2px solid #F4492E
+}

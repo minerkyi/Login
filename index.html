@@ -19,14 +19,16 @@
                 </p>
                 <form action="./">
                     <div class="input-group">
-                        <input type="text" placeholder="아이디">
-                        <input type="password" placeholder="비밀번호">
+                        <input type="text" id="id" name="id" placeholder="아이디">
+                        <span class="error">아이디를 입력해 주세요.</span>
+                        <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                        <span class="error">아이디 혹은 비밀번호과 일치하지 않습니다.</span>
                     </div>
-                    <button>
-                        <img src="./images/check-box.svg" alt="">
+                    <button id="keep-login">
+                        <img src="./images/check-box.svg" id="keep-img" alt="">
                         <span>로그인 상태 유지</span>
                     </button>
-                    <a href="#">로그인</a>
+                    <a href="#" id="submit">로그인</a>
                 </form>
                 <P class="reg-area">
                     <span>회원가입</span>
@@ -54,5 +56,6 @@
                 </a>
             </div>
         </article>
+        <script src="./script/script.js"></script>
     </body>
 </html>
