@@ -27,7 +27,7 @@ $inputId.addEventListener('input', () => {
         $inputId.nextElementSibling.style.display = 'block';
     }
 
-    // 아이디 입력 시 비밀번호 체크 제외
+    // 아이디 입력 시 비밀번호 오류 상태 해제
     if($inputPw.classList.contains('error')) {
         $inputPw.classList.remove('error');
         $inputPw.nextElementSibling.style.display = 'none';
@@ -43,13 +43,12 @@ $inputPw.addEventListener('input', () => {
 const $btnLogin = document.getElementById('submit');
 
 $btnLogin.addEventListener('click', () => {
-    if($inputId.value === $inputPw.value) {
+    // 아이디가 빈 값이거나 비밀번호가 동일한 경우 비밀번호 오류 상태 해제
+    if($inputId.value === '' || $inputId.value === $inputPw.value) {
         $inputPw.classList.remove('error');
         $inputPw.nextElementSibling.style.display = 'none';
     } else {
-        if(id !== '') { // 아이디가 빈 값이 경우 비밀번호 체크 제외
-            $inputPw.classList.add('error');
-            $inputPw.nextElementSibling.style.display = 'block';
-        }
+        $inputPw.classList.add('error');
+        $inputPw.nextElementSibling.style.display = 'block';
     }
 });
